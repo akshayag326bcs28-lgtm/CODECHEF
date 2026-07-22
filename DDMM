@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        char S[11];
+        scanf("%s", S);
+
+        int first = (S[0] - '0') * 10 + (S[1] - '0');
+        int second = (S[3] - '0') * 10 + (S[4] - '0');
+
+        if (first > 12)
+            printf("DD/MM/YYYY\n");
+        else if (second > 12)
+            printf("MM/DD/YYYY\n");
+        else
+            printf("BOTH\n");
+    }
+
+    return 0;
+}
